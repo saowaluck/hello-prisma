@@ -1,0 +1,26 @@
+{
+  "name": "hello-prisma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate-data": "npx prisma migrate dev --name init",
+    "dev:create": "npx ts-node crud/create.ts",
+    "dev:update": "npx ts-node crud/update.ts",
+    "dev:upsert": "npx ts-node crud/upsert.ts",
+    "dev:read": "npx ts-node crud/read.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "prisma": "5.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@prisma/client": "5.13.0"
+  }
+}
