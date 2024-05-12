@@ -9,7 +9,9 @@
     "dev:create": "npx ts-node crud/create.ts",
     "dev:update": "npx ts-node crud/update.ts",
     "dev:upsert": "npx ts-node crud/upsert.ts",
-    "dev:read": "npx ts-node crud/read.ts"
+    "dev:read": "npx ts-node crud/read.ts",
+    "dev:delete": "npx ts-node crud/delete.ts",
+    "studio": "npx prisma studio"
   },
   "keywords": [],
   "author": "",

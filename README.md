@@ -82,7 +82,7 @@ DATABASE_URL="postgresql://root:password@localhost:5432/mydb"
 | autoincrement | เป็นการให้มัน generate key ใหม่มาเสมอ |
 | @default | เป็นการทำ default field ต่างๆ |
 | author  User  @relation(fields: [authorId], references: [id])
-authorId  Int | เป็นการทำ forign key ไปยังอีก  table หนึ่ง โดยจะอ้างอิง จาก field 
+authorId  Int | เป็นการทำ forign key ไปยังอีก  table หนึ่ง โดยจะอ้างอิง จาก field
 authorId ที่ จะลิ้งไปยัง User model |
 | posts Post[] | เป็น array objects เพื่อเก็บว่า user แต่ละคนมี post ไรบ้าง |
 
@@ -255,3 +255,29 @@ async function findMany() {
     return user
 }
 ```
+
+- Delete
+
+```prolog
+async function main() {
+    const user = await prisma.user.delete({
+        where: {
+            email: 'bert@prisma.io',
+        },
+    })
+    log("user :", user)
+    return user
+}
+```
+
+---
+
+# **Prisma Studio**
+
+Start prima dashboard with command
+
+```prolog
+npx prisma studio
+```
+
+It will show web portal on `localhost:5555`
